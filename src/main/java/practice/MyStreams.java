@@ -6,6 +6,7 @@ import practice.structure.SpellXML;
 
 import java.util.Comparator;
 import java.util.List;
+import java.util.Objects;
 
 @UtilityClass
 public class MyStreams {
@@ -26,5 +27,10 @@ public class MyStreams {
         damageSorted.forEach(System.out::println);
         return damageSorted;
 
+    }
+
+    public void filterByType(SpellBookXML spells, String type)
+    {
+        spells.getSpells().stream().filter(s -> Objects.equals(s.getType(), type)).toList().forEach(System.out::println);
     }
 }

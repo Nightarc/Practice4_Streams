@@ -21,6 +21,7 @@ public class Main {
         }
 
         //MyStreams.writeNames(spells);
-        MyStreams.displayTopDamage(spells);
+        //MyStreams.displayTopDamage(spells);
+        MyStreams.filterByType(spells, "projectile");
     }
 }
