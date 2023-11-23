@@ -20,6 +20,7 @@ public class Main {
             System.out.println(e.getMessage());
         }
 
-        MyStreams.writeNames(spells);
+        //MyStreams.writeNames(spells);
+        MyStreams.displayTopDamage(spells);
     }
 }
