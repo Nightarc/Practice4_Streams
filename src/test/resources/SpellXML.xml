@@ -1,0 +1,168 @@
+<SpellXML>
+    <spell id="0" name="nuke">
+        <type>projectile</type>
+        <uses>1</uses>
+        <manacost>200</manacost>
+        <damage>1000</damage>
+        <radius>150</radius>
+        <speed>300</speed>
+        <lifetime>360</lifetime>
+        <castDelay>0.33</castDelay>
+        <cooldown>10.00</cooldown>
+        <rarity>
+            <tier id="1">0.3</tier>
+            <tier id="10">0.2</tier>
+        </rarity>
+    </spell>
+    
+    <spell id="1" name="circle_of_acid">
+        <type>material</type>
+        <uses>4</uses>
+        <manacost>40</manacost>
+        <damage/>
+        <radius/>
+        <speed/>
+        <lifetime>260</lifetime>
+        <castDelay>0.33</castDelay>
+        <cooldown>10.00</cooldown>
+        <rarity>
+            <tier id="1">0.4</tier>
+            <tier id="2">0.4</tier>
+            <tier id="3">0.4</tier>
+        </rarity>
+    </spell>
+    
+    <spell id="2" name="tuple_scatter">
+        <type>multicast</type>
+        <uses/>
+        <manacost>0</manacost>
+        <damage>1000</damage>
+        <radius/>
+        <speed/>
+        <lifetime/>
+        <castDelay/>
+        <cooldown/>
+        <rarity>
+            <tier id="1">0.8</tier>
+            <tier id="2">0.8</tier>
+        </rarity>
+    </spell>
+    
+    <spell id="3" name="thundercloud">
+        <type>static_projectile</type>
+        <uses>5</uses>
+        <manacost>90</manacost>
+        <damage/>
+        <radius>150</radius>
+        <speed/>
+        <lifetime>600</lifetime>
+        <castDelay>0.50</castDelay>
+        <cooldown>10.00</cooldown>
+        <rarity>
+            <tier id="1">0.3</tier>
+            <tier id="2">0.3</tier>
+            <tier id="3">0.3</tier>
+            <tier id="4">0.3</tier>
+            <tier id="5">0.3</tier>
+        </rarity>
+    </spell>
+    
+    <spell id="4" name="energy_shield">
+        <type>passive</type>
+        <uses/>
+        <manacost>10</manacost>
+        <damage/>
+        <radius/>
+        <speed/>
+        <lifetime/>
+        <castDelay/>
+        <cooldown/>
+        <rarity>
+            <tier id="1">0.05</tier>
+            <tier id="2">0.3</tier>
+            <tier id="3">0.3</tier>
+            <tier id="4">0.3</tier>
+            <tier id="5">0.3</tier>
+        </rarity>
+    </spell>
+    <spell id="5" name="omniscient_eye">
+        <type>utility</type>
+        <uses>10</uses>
+        <manacost>100</manacost>
+        <damage/>
+        <radius/>
+        <speed>300</speed>
+        <lifetime>1000</lifetime>
+        <castDelay/>
+        <cooldown/>
+        <rarity>
+            <tier id="1">0.8</tier>
+            <tier id="2">1</tier>
+        </rarity>
+    </spell>
+    
+    <spell id="6" name="death_cross">
+        <type>projectile</type>
+        <uses/>
+        <manacost>80</manacost>
+        <damage>30</damage>
+        <radius>25</radius>
+        <speed/>
+        <lifetime>68</lifetime>
+        <castDelay>0.67</castDelay>
+        <cooldown>10.00</cooldown>
+        <rarity>
+            <tier id="1">0.3</tier>
+            <tier id="2">0.6</tier>
+            <tier id="6">0.6</tier>
+        </rarity>
+    </spell>
+    
+    <spell id="7" name="glowing_lance">
+        <type>projectile</type>
+        <uses/>
+        <manacost>30</manacost>
+        <damage>35</damage>
+        <radius>1</radius>
+        <speed>350</speed>
+        <lifetime>300</lifetime>
+        <castDelay>0.33</castDelay>
+        <cooldown>10.00</cooldown>
+        <rarity>
+            <tier id="1">1</tier>
+            <tier id="2">1</tier>
+        </rarity>
+    </spell>
+    
+    <spell id="9" name="thundercloud">
+        <type>static_projectile</type>
+        <uses>1</uses>
+        <manacost>200</manacost>
+        <damage>1000</damage>
+        <radius>150</radius>
+        <speed>300</speed>
+        <lifetime>360</lifetime>
+        <castDelay>0.33</castDelay>
+        <cooldown>10.00</cooldown>
+        <rarity>
+            <tier id="1">0.3</tier>
+            <tier id="10">0.2</tier>
+        </rarity>
+    </spell>
+    
+    <spell id="10" name="luminous_drill">
+        <type>projectile</type>
+        <uses/>
+        <manacost>10</manacost>
+        <damage>10</damage>
+        <radius/>
+        <speed>1400</speed>
+        <lifetime>2</lifetime>
+        <castDelay>-0.58</castDelay>
+        <cooldown>-0.17</cooldown>
+        <rarity>
+            <tier id="1">1</tier>
+            <tier id="2">1</tier>
+        </rarity>
+    </spell>
+</SpellXML>
