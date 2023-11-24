@@ -134,7 +134,7 @@
         </rarity>
     </spell>
     
-    <spell id="9" name="thundercloud">
+    <spell id="9" name="magic_cloud">
         <type>static_projectile</type>
         <uses>1</uses>
         <manacost>200</manacost>

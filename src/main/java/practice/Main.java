@@ -22,6 +22,7 @@ public class Main {
 
         //MyStreams.writeNames(spells);
         //MyStreams.displayTopDamage(spells);
-        MyStreams.filterByType(spells, "projectile");
+        //MyStreams.filterByType(spells, "projectile");
+        MyStreams.generateHash(spells);
     }
 }
