@@ -1,27 +1,20 @@
 package practice;
 
-import com.ctc.wstx.exc.WstxOutputException;
 import lombok.experimental.UtilityClass;
 import practice.structure.SpellBookXML;
 import practice.structure.SpellXML;
 
-import java.util.Comparator;
-import java.util.List;
-import java.util.Map;
-import java.util.Objects;
+import java.util.*;
 import java.util.stream.Collectors;
 
 @UtilityClass
 public class MyStreams {
-    public void writeNames(SpellBookXML spells)
-    {
+    public void writeNames(SpellBookXML spells) {
         spells.getSpells()
                 .forEach(s -> System.out.println(s.getName()));
     }
 
-    public List<SpellXML> displayTopDamage(SpellBookXML spells)
-    {
-        spells.getSpells().forEach(System.out::println);
+    public List<SpellXML> sortByDamage(SpellBookXML spells) {
         Comparator<SpellXML> byDamage = Comparator.comparing(
                 SpellXML::getDamage,
                 Integer::compare);
@@ -32,19 +25,28 @@ public class MyStreams {
 
     }
 
-    public void filterByType(SpellBookXML spells, String type)
-    {
-        spells.getSpells().stream().filter(s -> Objects.equals(s.getType(), type)).toList().forEach(System.out::println);
+    public void filterByType(SpellBookXML spells, String type) {
+        spells.getSpells().stream()
+                .filter(s -> Objects.equals(s.getType(), type))
+                .toList()
+                .forEach(System.out::println);
     }
 
 
-    public void generateHash(SpellBookXML spells)
-    {
+    public void generateHash(SpellBookXML spells) {
         Map<String, Integer> hash = spells.getSpells().stream()
-                .collect(Collectors.toMap(SpellXML::getName, s -> s.getName().length()*s.getId()));
+                .collect(Collectors.toMap(SpellXML::getName, s -> s.getName().length() * s.getId()));
 
-        hash.entrySet().forEach(entry -> System.out.println(entry.getKey() + " " + entry.getValue().toString()));
+        hash.forEach((key, value) -> System.out.println(key + " " + value.toString()));
+    }
 
 
+    public void calculateAverageDamage(SpellBookXML spells) {
+        System.out.println(
+                spells.getSpells().stream()
+                        .filter(s -> s.getDamage() > 0)
+                        .mapToInt(SpellXML::getDamage)
+                        .average()
+        );
     }
 }

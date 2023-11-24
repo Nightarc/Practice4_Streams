@@ -20,9 +20,18 @@ public class Main {
             System.out.println(e.getMessage());
         }
 
-        //MyStreams.writeNames(spells);
-        //MyStreams.displayTopDamage(spells);
-        //MyStreams.filterByType(spells, "projectile");
+        MyStreams.writeNames(spells);
+        System.out.println();
+
+        MyStreams.sortByDamage(spells);
+        System.out.println();
+
+        MyStreams.filterByType(spells, "projectile");
+        System.out.println();
+
         MyStreams.generateHash(spells);
+        System.out.println();
+
+        MyStreams.calculateAverageDamage(spells);
     }
 }
