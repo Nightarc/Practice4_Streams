@@ -7,7 +7,7 @@ import java.io.File;
 import java.io.IOException;
 
 public final class XML{
-    XmlMapper xmlMapper = new XmlMapper();
+    final XmlMapper xmlMapper = new XmlMapper();
 
 
     public SpellBookXML read(File inputFile) throws IOException {

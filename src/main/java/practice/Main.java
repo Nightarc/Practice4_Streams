@@ -1,37 +1,22 @@
 package practice;
 
-import practice.structure.SpellBookXML;
-import practice.structure.XML;
-
-import java.io.File;
-
-// Press Shift twice to open the Search Everywhere dialog and type `show whitespaces`,
-// then press Enter. You can now see whitespace characters in your code.
+import static practice.MenuService.*;
+/**
+ * Консольное приложение по работе с файлами структуры заклинаний.
+ */
 public class Main {
     public static void main(String[] args) {
-        File inputFile = new File("src/test/resources/SpellXML.xml");
-        XML xmlHelper = new XML();
-        SpellBookXML spells = new SpellBookXML();
-        try {
-            spells = xmlHelper.read(inputFile);
+        if (args.length == 1) {
+            try {
+                displayMenu();
+
+                int userInput = handleUserInput() - 1;
+                MyStreams.getMethods().get(userInput).invoke(SpellReader.readFile(args[0]), new Object[]{});
+            } catch (Exception e) {
+                System.err.println(e.getMessage());
+            }
+        } else {
+            System.out.println("Использование: .jar <spellsFileName>");
         }
-        catch(Exception e)
-        {
-            System.out.println(e.getMessage());
-        }
-
-        MyStreams.writeNames(spells);
-        System.out.println();
-
-        MyStreams.sortByDamage(spells);
-        System.out.println();
-
-        MyStreams.filterByType(spells, "projectile");
-        System.out.println();
-
-        MyStreams.generateHash(spells);
-        System.out.println();
-
-        MyStreams.calculateAverageDamage(spells);
     }
 }
