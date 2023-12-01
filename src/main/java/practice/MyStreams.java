@@ -48,7 +48,7 @@ public class MyStreams {
                 Integer::compare);
 
         List<SpellXML> damageSorted = spells.getSpells().stream().sorted(byDamage).toList();
-        damageSorted.forEach(System.out::println);
+        damageSorted.forEach(s -> System.out.printf("%s, damage: %d%n", s.getName(), s.getDamage()));
     }
 
     /**

@@ -8,15 +8,22 @@ public class Main {
     public static void main(String[] args) {
         if (args.length == 1) {
             try {
-                displayMenu();
+                MyStreams spells = new MyStreams(SpellReader.readFile(args[0]));
 
-                int userInput = handleUserInput() - 1;
-                MyStreams.getMethods().get(userInput).invoke(SpellReader.readFile(args[0]), new Object[]{});
+                displayMenu();
+                String userInput = handleUserInput();
+
+                if(userInput.equals("")) // Автоматический режим работы
+                {
+                    spells.names();
+                }
+                else MyStreams.getMethods().get(Integer.parseInt(userInput) - 1)
+                        .invoke(spells, new Object[]{});
             } catch (Exception e) {
                 System.err.println(e.getMessage());
             }
         } else {
-            System.out.println("Использование: .jar <spellsFileName>");
+            System.err.println("Использование: .jar <spellsFileName>");
         }
     }
 }

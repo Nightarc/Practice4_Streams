@@ -1,0 +1,257 @@
+{
+  "spellTypes" : [ {
+    "SpellType" : {
+      "name" : "material",
+      "spells" : [ {
+        "id" : 1,
+        "name" : "circle_of_acid",
+        "uses" : 4,
+        "manacost" : 40,
+        "damage" : 0,
+        "radius" : 0,
+        "speed" : 0,
+        "lifetime" : 260,
+        "castDelay" : 0.33,
+        "cooldown" : 10.0,
+        "rarity" : {
+          "tier" : [ {
+            "id" : 1,
+            "chanceValue" : 0.4
+          }, {
+            "id" : 2,
+            "chanceValue" : 0.4
+          }, {
+            "id" : 3,
+            "chanceValue" : 0.4
+          } ]
+        }
+      } ]
+    }
+  }, {
+    "SpellType" : {
+      "name" : "static_projectile",
+      "spells" : [ {
+        "id" : 3,
+        "name" : "thundercloud",
+        "uses" : 5,
+        "manacost" : 90,
+        "damage" : 0,
+        "radius" : 150,
+        "speed" : 0,
+        "lifetime" : 600,
+        "castDelay" : 0.5,
+        "cooldown" : 10.0,
+        "rarity" : {
+          "tier" : [ {
+            "id" : 1,
+            "chanceValue" : 0.3
+          }, {
+            "id" : 2,
+            "chanceValue" : 0.3
+          }, {
+            "id" : 3,
+            "chanceValue" : 0.3
+          }, {
+            "id" : 4,
+            "chanceValue" : 0.3
+          }, {
+            "id" : 5,
+            "chanceValue" : 0.3
+          } ]
+        }
+      }, {
+        "id" : 9,
+        "name" : "thundercloud",
+        "uses" : 1,
+        "manacost" : 200,
+        "damage" : 1000,
+        "radius" : 150,
+        "speed" : 300,
+        "lifetime" : 360,
+        "castDelay" : 0.33,
+        "cooldown" : 10.0,
+        "rarity" : {
+          "tier" : [ {
+            "id" : 1,
+            "chanceValue" : 0.3
+          }, {
+            "id" : 10,
+            "chanceValue" : 0.2
+          } ]
+        }
+      } ]
+    }
+  }, {
+    "SpellType" : {
+      "name" : "utility",
+      "spells" : [ {
+        "id" : 5,
+        "name" : "omniscient_eye",
+        "uses" : 10,
+        "manacost" : 100,
+        "damage" : 0,
+        "radius" : 0,
+        "speed" : 300,
+        "lifetime" : 1000,
+        "castDelay" : 0.0,
+        "cooldown" : 0.0,
+        "rarity" : {
+          "tier" : [ {
+            "id" : 1,
+            "chanceValue" : 0.8
+          }, {
+            "id" : 2,
+            "chanceValue" : 1.0
+          } ]
+        }
+      } ]
+    }
+  }, {
+    "SpellType" : {
+      "name" : "passive",
+      "spells" : [ {
+        "id" : 4,
+        "name" : "energy_shield",
+        "uses" : 0,
+        "manacost" : 10,
+        "damage" : 0,
+        "radius" : 0,
+        "speed" : 0,
+        "lifetime" : 0,
+        "castDelay" : 0.0,
+        "cooldown" : 0.0,
+        "rarity" : {
+          "tier" : [ {
+            "id" : 1,
+            "chanceValue" : 0.05
+          }, {
+            "id" : 2,
+            "chanceValue" : 0.3
+          }, {
+            "id" : 3,
+            "chanceValue" : 0.3
+          }, {
+            "id" : 4,
+            "chanceValue" : 0.3
+          }, {
+            "id" : 5,
+            "chanceValue" : 0.3
+          } ]
+        }
+      } ]
+    }
+  }, {
+    "SpellType" : {
+      "name" : "projectile",
+      "spells" : [ {
+        "id" : 0,
+        "name" : "nuke",
+        "uses" : 1,
+        "manacost" : 200,
+        "damage" : 1000,
+        "radius" : 150,
+        "speed" : 300,
+        "lifetime" : 360,
+        "castDelay" : 0.33,
+        "cooldown" : 10.0,
+        "rarity" : {
+          "tier" : [ {
+            "id" : 1,
+            "chanceValue" : 0.3
+          }, {
+            "id" : 10,
+            "chanceValue" : 0.2
+          } ]
+        }
+      }, {
+        "id" : 6,
+        "name" : "death_cross",
+        "uses" : 0,
+        "manacost" : 80,
+        "damage" : 30,
+        "radius" : 25,
+        "speed" : 0,
+        "lifetime" : 68,
+        "castDelay" : 0.67,
+        "cooldown" : 10.0,
+        "rarity" : {
+          "tier" : [ {
+            "id" : 1,
+            "chanceValue" : 0.3
+          }, {
+            "id" : 2,
+            "chanceValue" : 0.6
+          }, {
+            "id" : 6,
+            "chanceValue" : 0.6
+          } ]
+        }
+      }, {
+        "id" : 7,
+        "name" : "glowing_lance",
+        "uses" : 0,
+        "manacost" : 30,
+        "damage" : 35,
+        "radius" : 1,
+        "speed" : 350,
+        "lifetime" : 300,
+        "castDelay" : 0.33,
+        "cooldown" : 10.0,
+        "rarity" : {
+          "tier" : [ {
+            "id" : 1,
+            "chanceValue" : 1.0
+          }, {
+            "id" : 2,
+            "chanceValue" : 1.0
+          } ]
+        }
+      }, {
+        "id" : 10,
+        "name" : "luminous_drill",
+        "uses" : 0,
+        "manacost" : 10,
+        "damage" : 10,
+        "radius" : 0,
+        "speed" : 1400,
+        "lifetime" : 2,
+        "castDelay" : -0.58,
+        "cooldown" : -0.17,
+        "rarity" : {
+          "tier" : [ {
+            "id" : 1,
+            "chanceValue" : 1.0
+          }, {
+            "id" : 2,
+            "chanceValue" : 1.0
+          } ]
+        }
+      } ]
+    }
+  }, {
+    "SpellType" : {
+      "name" : "multicast",
+      "spells" : [ {
+        "id" : 2,
+        "name" : "tuple_scatter",
+        "uses" : 0,
+        "manacost" : 0,
+        "damage" : 1000,
+        "radius" : 0,
+        "speed" : 0,
+        "lifetime" : 0,
+        "castDelay" : 0.0,
+        "cooldown" : 0.0,
+        "rarity" : {
+          "tier" : [ {
+            "id" : 1,
+            "chanceValue" : 0.8
+          }, {
+            "id" : 2,
+            "chanceValue" : 0.8
+          } ]
+        }
+      } ]
+    }
+  } ]
+}

@@ -11,7 +11,7 @@ import java.util.Scanner;
 public final class MenuService {
     public void displayMenu()
     {
-        System.out.println("Введите номер команд из доступных:");
+        System.out.println("Введите номер команд из доступных или пустую строку для вывода заклинаний в файле:");
 
         List<Method> spellsMethods = MyStreams.getMethods();
 
@@ -22,15 +22,17 @@ public final class MenuService {
     /**
      * Метод, вызывающий метод из класса {@link MyStreams} на основе ввода пользователя
      */
-    public int handleUserInput()
+    public String handleUserInput()
     {
         Scanner scanner = new Scanner(System.in);
         try {
-            int userInput = scanner.nextInt();
-            if(userInput < 1 || userInput > MyStreams.getMethods().size()) throw new InputMismatchException();
+            String userInput = scanner.nextLine();
+            if(userInput.equals("")) return userInput;
+            int userInputNumber = Integer.parseInt(userInput);
+            if(userInputNumber < 1 || userInputNumber > MyStreams.getMethods().size()) throw new InputMismatchException();
             return userInput;
         }
-        catch(InputMismatchException e)
+        catch(Exception e)
         {
            throw new InputMismatchException("Некорректный номер операции. Номер был введен неправильно или операции под этим номером не существует");
         }
