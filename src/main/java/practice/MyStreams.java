@@ -5,27 +5,26 @@ import practice.structure.SpellBookXML;
 import practice.structure.SpellXML;
 
 import java.lang.reflect.Method;
+import java.lang.reflect.Modifier;
 import java.util.*;
 import java.util.stream.Collectors;
 
 @Getter
-@Setter
+@Setter(value = AccessLevel.PRIVATE)
 @AllArgsConstructor
 public class MyStreams {
 
     SpellBookXML spells;
 
+
     /**
-     * Возвращает список названий определенных в классе методов. Исключает методы с названиями, которые начинаются на
-     * lambda, get, set, чтобы исключить внутренние технические методы.
+     * <p>Возвращает список названий определенных в классе методов. Исключает методы с модификатором private. </p>
+     *
      * @return список названий методов
      */
-    public static List<Method> getMethods()
-    {
+    public static List<Method> getMethods() {
         return Arrays.stream(MyStreams.class.getDeclaredMethods())
-                .filter(method -> !method.getName().startsWith("lambda"))
-                .filter(method -> !method.getName().startsWith("set"))
-                .filter(method -> !method.getName().startsWith("get"))
+                .filter(method -> Modifier.isPublic(method.getModifiers()))
                 .sorted(Comparator.comparing(Method::getName))
                 .toList();
     }
@@ -40,10 +39,9 @@ public class MyStreams {
 
     /**
      * Возвращает отсортированный по урону в порядке возрастания список заклинаний
-     *
      */
     public void sortedByDamage() {
-        Comparator<SpellXML> byDamage = Comparator.comparing(
+        val byDamage = Comparator.comparing(
                 SpellXML::getDamage,
                 Integer::compare);
 
